@@ -1,0 +1,62 @@
+.landing-after-transition {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/pantheon.jpg") no-repeat center center fixed; 
+}
+
+.landing-before-transition {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url("../images/pantheon.jpg") no-repeat center center fixed; 
+}
+
+.landing { 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+  }
+
+.landing-title {
+  font-family: "Libre Caslon Text", serif;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 400;
+  color: #111;
+  margin-top: 20vh;
+}
+
+.landing-menu {
+  margin-top: 20vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.2vw;
+  text-align: center;
+}
+
+@media screen and (max-width : 700px) {
+
+  .landing-menu {
+    font-size: 3.5vw;
+  }
+}
+
+.menu-option {
+  margin-top: 10vh;
+}
+
+a, .menu-option {
+  font-weight: 400;
+  color: #111;
+  text-decoration: none;
+}
+
+.menu-option:hover {
+  font-weight: 600;
+}

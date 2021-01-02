@@ -1,0 +1,73 @@
+.show-modes {
+    margin: auto;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.mode-selection {
+    width: 300px;
+    height: 300px;
+    margin: 50px 20px 0 20px;
+    padding: 25px 10px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Libre Caslon Text", serif;
+    box-sizing: border-box;
+    transition: font-size 150ms;
+}
+
+.mode-selection:hover {
+    border: 3px solid black;
+    padding: 23px 8px;
+    font-size: 1.02rem;
+    box-shadow: 2px 4px 2px #bbb;
+}
+
+.mode-selection p {
+    font-size: 1.1em;
+}
+
+.mode-selection h3 {
+    font-size: 1.4em;
+}
+
+@media screen and (max-width : 400px) {
+    .mode-selection {
+        width: 270px;
+        height: 270px;
+        margin: 50px 5px 0 5px;
+        padding: 5px 5px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 5px;
+        text-align: center;
+        font-family: "Libre Caslon Text", serif;
+        box-sizing: border-box;
+        transition: font-size 150ms;
+    }
+    
+    .mode-selection:hover {
+        border: 3px solid black;
+        padding: 3px 3px;
+        font-size: 1.02rem;
+        box-shadow: 2px 4px 2px #bbb;
+    }
+    
+    .mode-selection p {
+        font-size: 0.9em;
+    }
+    
+    .mode-selection h3 {
+        font-size: 1.2em;
+    }
+}
+

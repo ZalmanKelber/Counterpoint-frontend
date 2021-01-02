@@ -1,0 +1,70 @@
+.navbar {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+    background: url("../images/corinthian.jpg");
+    background-size: 100%;
+    border-top: solid black 5px;
+    border-bottom: solid black 5px;
+}
+
+.menu-items {
+    display: flex;
+}
+
+.menu-link {
+    width: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+}
+
+.navbar-title {
+    font-family: "Libre Caslon Text", serif;
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width : 520px) {
+
+    .menu-link {
+        font-size: 3vw;
+        width: 10vw;
+        padding: 4px;
+        margin: 1px;
+    }
+
+    .menu-link a {
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width : 750px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar-title {
+      display: none;
+    }
+}
+
+a {
+    color:white;
+    font-weight: 300;
+}
+
+a:hover {
+    font-weight: 400;
+}
+
+.menu-link, .navbar-title {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    margin: 10px;
+    color: white;
+}

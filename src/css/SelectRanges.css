@@ -1,0 +1,50 @@
+.choose-range-content {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    height: 100%;
+}
+
+.ranges-container {
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ranges-list {
+    margin-bottom: 40px;
+}
+
+.range {
+    width: 200px;
+    height: 50px;
+    box-sizing: border-box;
+    padding-top: 3px;
+    margin-top: -3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.7rem;
+    border: 3px solid black;
+}
+
+.range:hover {
+    cursor: pointer;
+}
+
+.selected-range {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.continue-button {
+    margin-top: 25px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: font-size 150ms;
+    margin-bottom: 30px;
+}
+
+.continue-button:hover {
+    cursor: pointer;
+    font-size: 1.58rem;
+}

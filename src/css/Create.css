@@ -1,0 +1,34 @@
+.go-back-button {
+    font-family: "Open Sans", sans-serif;
+    margin: 20px 0 0 10px;
+}
+
+.go-back-button:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.create-title, .step-title {
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    text-align: center;
+
+}
+
+.create-title {
+    font-size: 2.3rem;
+}
+
+.step-title {
+    font-size: 1.9rem;
+}
+
+.step-content {
+    min-height: 100px;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

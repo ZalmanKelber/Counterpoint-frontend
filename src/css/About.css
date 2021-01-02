@@ -1,0 +1,42 @@
+.about {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.92)
+    ),
+    url("../images/notation.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+}
+
+.about h3 {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.about p {
+    font-family: "Libre Caslon Text", serif;
+}
+
+.about-content {
+    margin: 0 20px;
+}
+
+.about-content a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.about-heading {
+    font-weight: 600;
+}
+
+@media screen and (max-width : 500px) {
+    .about {
+        font-size: .8rem;
+    }
+}
