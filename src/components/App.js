@@ -11,12 +11,12 @@ import "../css/App.css"
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Route path="/" exact component={Enter} />
+    <BrowserRouter basename="/Counterpoint-frontend/">
       <Route path="/landing" exact component={Landing} />
       <Route path="/create" exact component={Create} />
       <Route path="/gallery" exact component={Gallery} />
       <Route path="/about" exact component={About} />
+      <Route path="/" component={Enter} />
     </BrowserRouter>
   );
 }
