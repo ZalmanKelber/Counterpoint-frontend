@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/ZalmanKelber/Counterpoint-frontend.git/static/css/main.b7a947a4.chunk.css",
+    "main.js": "/ZalmanKelber/Counterpoint-frontend.git/static/js/main.3a114f69.chunk.js",
+    "main.js.map": "/ZalmanKelber/Counterpoint-frontend.git/static/js/main.3a114f69.chunk.js.map",
+    "runtime-main.js": "/ZalmanKelber/Counterpoint-frontend.git/static/js/runtime-main.2a794bde.js",
+    "runtime-main.js.map": "/ZalmanKelber/Counterpoint-frontend.git/static/js/runtime-main.2a794bde.js.map",
+    "static/css/2.3e35cbb6.chunk.css": "/ZalmanKelber/Counterpoint-frontend.git/static/css/2.3e35cbb6.chunk.css",
+    "static/js/2.58be1ffe.chunk.js": "/ZalmanKelber/Counterpoint-frontend.git/static/js/2.58be1ffe.chunk.js",
+    "static/js/2.58be1ffe.chunk.js.map": "/ZalmanKelber/Counterpoint-frontend.git/static/js/2.58be1ffe.chunk.js.map",
+    "index.html": "/ZalmanKelber/Counterpoint-frontend.git/index.html",
+    "static/css/2.3e35cbb6.chunk.css.map": "/ZalmanKelber/Counterpoint-frontend.git/static/css/2.3e35cbb6.chunk.css.map",
+    "static/css/main.b7a947a4.chunk.css.map": "/ZalmanKelber/Counterpoint-frontend.git/static/css/main.b7a947a4.chunk.css.map",
+    "static/js/2.58be1ffe.chunk.js.LICENSE.txt": "/ZalmanKelber/Counterpoint-frontend.git/static/js/2.58be1ffe.chunk.js.LICENSE.txt",
+    "static/media/SelectType.css": "/ZalmanKelber/Counterpoint-frontend.git/static/media/ThirdSpeciesPreview.ccad515e.png",
+    "static/media/DisplayResult.css": "/ZalmanKelber/Counterpoint-frontend.git/static/media/clouds.91a38a3f.jpg",
+    "static/media/Navbar.css": "/ZalmanKelber/Counterpoint-frontend.git/static/media/corinthian.13216432.jpg",
+    "static/media/About.css": "/ZalmanKelber/Counterpoint-frontend.git/static/media/notation.c60f7dff.jpg",
+    "static/media/Landing.css": "/ZalmanKelber/Counterpoint-frontend.git/static/media/pantheon.f306d870.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a794bde.js",
+    "static/css/2.3e35cbb6.chunk.css",
+    "static/js/2.58be1ffe.chunk.js",
+    "static/css/main.b7a947a4.chunk.css",
+    "static/js/main.3a114f69.chunk.js"
+  ]
+}
