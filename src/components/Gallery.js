@@ -34,20 +34,20 @@ class Gallery extends React.Component {
     render() {
 
         const audioFiles = [
-            `${window.location.origin}/frontendAudio/ionian.wav`, 
-            `${window.location.origin}/frontendAudio/dorian.wav`, 
-            `${window.location.origin}/frontendAudio/phrygian.wav`, 
-            `${window.location.origin}/frontendAudio/lydian.wav`, 
-            `${window.location.origin}/frontendAudio/mixolydian.wav`, 
-            `${window.location.origin}/frontendAudio/aeolian.wav`
+            `${process.env.PUBLIC_URL}/frontendAudio/ionian.wav`, 
+            `${process.env.PUBLIC_URL}/frontendAudio/dorian.wav`, 
+            `${process.env.PUBLIC_URL}/frontendAudio/phrygian.wav`, 
+            `${process.env.PUBLIC_URL}/frontendAudio/lydian.wav`, 
+            `${process.env.PUBLIC_URL}/frontendAudio/mixolydian.wav`, 
+            `${process.env.PUBLIC_URL}/frontendAudio/aeolian.wav`
         ];
         const imageFiles = [
-            `/images/ionian_example.png`, 
-            `/images/dorian_example.png`, 
-            `/images/phrygian_example.png`, 
-            `/images/lydian_example.png`, 
-            `/images/mixolydian_example.png`, 
-            `/images/aeolian_example.png`
+            `${process.env.PUBLIC_URL}/images/ionian_example.png`, 
+            `${process.env.PUBLIC_URL}/images/dorian_example.png`, 
+            `${process.env.PUBLIC_URL}/images/phrygian_example.png`, 
+            `${process.env.PUBLIC_URL}/images/lydian_example.png`, 
+            `${process.env.PUBLIC_URL}/images/mixolydian_example.png`, 
+            `${process.env.PUBLIC_URL}/images/aeolian_example.png`
         ];
         
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 import Landing from "./Landing";
 import Enter from "./Enter";
@@ -11,13 +11,13 @@ import "../css/App.css"
 
 const App = () => {
   return (
-    <BrowserRouter basename="/Counterpoint-frontend/">
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Route path="/landing" exact component={Landing} />
       <Route path="/create" exact component={Create} />
       <Route path="/gallery" exact component={Gallery} />
       <Route path="/about" exact component={About} />
-      <Route path="/" component={Enter} />
-    </BrowserRouter>
+      <Route path="/" exact component={Enter} />
+    </HashRouter>
   );
 }
 

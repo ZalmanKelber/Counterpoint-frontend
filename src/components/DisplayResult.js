@@ -25,7 +25,7 @@ class DisplayResult extends React.Component {
             }
         }, 500);
         const xml = new XMLHttpRequest();
-        xml.open("POST", "/api");
+        xml.open("POST", "https://counterpoint-server.herokuapp.com/api");
         xml.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xml.responseType = "blob";
         xml.onload = e => {

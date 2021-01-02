@@ -9,6 +9,5 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-console.log('public url: ', process.env.PUBLIC_URL)
 
 
