@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ZalmanKelber/Counterpoint-frontend.git/static/css/main.b7a947a4.chunk.css",
-    "main.js": "/ZalmanKelber/Counterpoint-frontend.git/static/js/main.3a114f69.chunk.js",
-    "main.js.map": "/ZalmanKelber/Counterpoint-frontend.git/static/js/main.3a114f69.chunk.js.map",
+    "main.js": "/ZalmanKelber/Counterpoint-frontend.git/static/js/main.a6c6913e.chunk.js",
+    "main.js.map": "/ZalmanKelber/Counterpoint-frontend.git/static/js/main.a6c6913e.chunk.js.map",
     "runtime-main.js": "/ZalmanKelber/Counterpoint-frontend.git/static/js/runtime-main.2a794bde.js",
     "runtime-main.js.map": "/ZalmanKelber/Counterpoint-frontend.git/static/js/runtime-main.2a794bde.js.map",
     "static/css/2.3e35cbb6.chunk.css": "/ZalmanKelber/Counterpoint-frontend.git/static/css/2.3e35cbb6.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.3e35cbb6.chunk.css",
     "static/js/2.58be1ffe.chunk.js",
     "static/css/main.b7a947a4.chunk.css",
-    "static/js/main.3a114f69.chunk.js"
+    "static/js/main.a6c6913e.chunk.js"
   ]
 }
