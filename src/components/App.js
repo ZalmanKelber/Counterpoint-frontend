@@ -9,16 +9,29 @@ import About from "./About";
 
 import "../css/App.css"
 
-const App = () => {
-  return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
-      <Route path="/landing" exact component={Landing} />
-      <Route path="/create" exact component={Create} />
-      <Route path="/gallery" exact component={Gallery} />
-      <Route path="/about" exact component={About} />
-      <Route path="/" exact component={Enter} />
-    </HashRouter>
-  );
+class App extends React.Component {
+
+  componentDidMount = () => {
+    const herokuWakeup = new XMLHttpRequest();
+    herokuWakeup.open("GET", "https://counterpoint-server.herokuapp.com/api/wake_up");
+    herokuWakeup.onload = e => {
+      console.log("response from herokuWakeup:", herokuWakeup.response)
+    }
+    herokuWakeup.send();
+  }
+
+  render() {
+
+    return (
+      <HashRouter basename={process.env.PUBLIC_URL}>
+        <Route path="/landing" exact component={Landing} />
+        <Route path="/create" exact component={Create} />
+        <Route path="/gallery" exact component={Gallery} />
+        <Route path="/about" exact component={About} />
+        <Route path="/" exact component={Enter} />
+      </HashRouter>
+    );
+  }
 }
 
 export default App;

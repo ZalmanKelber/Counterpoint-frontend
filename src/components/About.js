@@ -89,7 +89,14 @@ class About extends React.Component {
                         rules.  If we arrive at a situation in which no notes can be legally placed, the previous note is removed and replaced with another one.  
                         In this way, several correct solutions are generated.  These solutions are then scored, and the best one is returned.
                     </p>
-                    <h3 className="about-question">Q: What are the next steps for the project?</h3>
+                    <h3 className="about-question">Q: Why can't I download an actual audio file of the examples I create as well as a pdf of the score?</h3>
+                    <p>
+                        This will likely be the next goal of the project.  Technologies that convert MIDI files to actual playable audio and generate PDF's of 
+                        scores, such as fluidsynth and lilypond, tend to exist as desktop applications or command line interfaces.  There are currently no programs that
+                        perform these tasks programatically from python that can be installed as dependencies in deployment.
+                    </p>
+
+                    <h3 className="about-question">Q: What are some of the other next steps for the project?</h3>
                     <p>
                         The program so far only writes examples with one or two simultaneous melodies.  Traditionally, this style of counterpoint 
                         culminates with five simultanous melodies.  Eventually, this program will ideally generate a <em>musical score</em> in addition

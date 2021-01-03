@@ -29,10 +29,14 @@ class DisplayResult extends React.Component {
         xml.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xml.responseType = "blob";
         xml.onload = e => {
-              const url = window.URL.createObjectURL(xml.response);
-              this.setState({ ...this.state, blobURL: url });
-              const MIDIjs = window.MIDIjs;
-              MIDIjs.play(url)
+            if (xml.status === 200) {
+                const url = window.URL.createObjectURL(xml.response);
+                this.setState({ ...this.state, blobURL: url });
+                const MIDIjs = window.MIDIjs;
+                MIDIjs.play(url)
+            } else {
+                this.tryAgain()
+            }
           };
         xml.send(jsonRequest);
         this.setState({ ...this.state, waitingForResults: false});
@@ -83,7 +87,7 @@ class DisplayResult extends React.Component {
                 this.state.blobURL && 
                 <>
                 <div className="success-container">
-                    <h2 className="success-title">Success!  Here's the file you generated.  Click below to download as a MIDI file</h2>
+                    <h2 className="success-title">Success!  Here's the composition you generated.  Click below to download as a MIDI file</h2>
                     {/* <div className="audio-player-container">
                         <AudioPlayer
                             autoPlay
@@ -95,7 +99,7 @@ class DisplayResult extends React.Component {
                         />
                     </div> */}
                 </div>
-                <h2 className="download-button results-button" onClick={this.downloadAudio}>Download Audio</h2>
+                <h2 className="download-button results-button" onClick={this.downloadAudio}>Download MIDI</h2>
                 <h2 className="generate-option results-button" onClick={this.tryAgain}>Try again with same parameters</h2>
                 <h2 className="or">or</h2>
                 <h2 className="generate-option results-button" onClick={this.startNew}>Start from the beginning</h2>
