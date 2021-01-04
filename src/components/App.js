@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Route path="/landing" exact component={Landing} />
         <Route path="/create" exact component={Create} />
         <Route path="/gallery" exact component={Gallery} />
