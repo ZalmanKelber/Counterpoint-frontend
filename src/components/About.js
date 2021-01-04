@@ -111,6 +111,20 @@ class About extends React.Component {
                         For a famous example of five-voice, imitative counterpoint, listen to Palestrina's motet, <a href="https://www.youtube.com/watch?v=nRmkj19i4Yk">
                         <em>Exultate Deo</em></a>.
                     </p>
+                    <hr />
+                    <h3 className="about-heading">Technologies used in this project:</h3>
+                    <p>Frontend: React, React Router Dom, React H5 Audio Player, MIDIjs</p>
+                    <p>API: Flask, Gunicorn, MIDIUtil</p>
+                    <h3 className="about-heading">Photo Credits:</h3>
+                    <p>
+                        All images of Renaissance artwork from Wikimedia Commons.  All others images from <a href="https://pixabay.com/">Pixabay</a>.
+                    </p>
+                    <p>
+                        Homepage: Jacques Gaimard, Navbar: Rob Porter, Gallery: Dimitris Vetsikas, Results Player: Enrique Lopez Garre, Thumbnail: Christo Anestev, 
+                        Ionian box: Thomas Hendele, Dorian box: Goran Horvat, Phrygian box: Enrique Lopez Garre, Lydian box: Markus Wittmann, 
+                        Mixolydian box: Hans Braxmeier, Aeolian box: Alexander Stein
+                    </p>
+
 
                 </div>
                 <Footer />
