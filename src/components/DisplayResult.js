@@ -77,7 +77,7 @@ class DisplayResult extends React.Component {
             case 3:
                 return "...";
             default:
-                return "...waiting for results";
+                return "...composing counterpoint";
         }
     }
 
@@ -109,7 +109,8 @@ class DisplayResult extends React.Component {
             {
                 this.state.blobURL && 
                 <>
-                <h2 className="success-title">Success!  Here's the composition you generated.  Click below to download as a MIDI file</h2>
+                <h2 className="success-title">Success!  The algorithm composed this piece based on your specifications!  
+                <br /><br />Click below to download it as a MIDI file, to generate another example with the same specifications, or to start again from the beginning</h2>
                 <div className="success-container">
                     <div className="toggle-button-outer" onClick={this.togglePlaying}>
                         <div className={this.state.playing ? "pause-button" : "play-button"}></div>
