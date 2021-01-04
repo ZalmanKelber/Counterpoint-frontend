@@ -91,7 +91,6 @@ class DisplayResult extends React.Component {
     }
 
     tryAgain = () => {
-        console.log("trying again")
         this.props.refreshDisplayResult();
     }
 

@@ -11,11 +11,6 @@ class SelectRanges extends React.Component {
         selectedIndex: null
     }
 
-    handleSubmit = async () => {
-        await this.props.updateValue(this.state.selected);
-        this.props.goForward();
-    }
-
     getNumberOfLines = () => {
         return ["cantusFirmus", "freeMelody"].includes(this.props.currentSelections.type) ? 1 : 2;
     }
@@ -80,9 +75,6 @@ class SelectRanges extends React.Component {
                                 )
                             })
                         }
-                    </div>
-                    <div className="continue-button" onClick={this.handleSubmit} style={{ display: this.state.selected.length === 0 ? "none" : "block" }}>
-                        Continue
                     </div>
                 </div>
             </div>

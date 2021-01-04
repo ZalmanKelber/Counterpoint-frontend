@@ -18,7 +18,7 @@ class About extends React.Component {
                 <div className="about-content">
                     <h3 className="about-heading">
                         To learn more about this program from a technical standpoint, or to watch a short video demonstration,
-                        visit the <a href="https://github.com/ZalmanKelber/CounterpointWebApp">Github repository</a>
+                        visit the <a href="https://github.com/ZalmanKelber/Counterpoint-frontend">Github repository</a>
                     </h3>
                     <h3 className="about-heading">To learn the basics of what this project is, read the following Q & A</h3>
                     <br /><br /><hr />

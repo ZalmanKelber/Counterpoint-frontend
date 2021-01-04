@@ -63,7 +63,6 @@ class Create extends React.Component {
     }
 
     refreshDisplayResult = async () => {
-        console.log("attempting to refresh display result");
         await this.setState({
             ...this.state,
             currentPhase: phases.SELECT_LENGTH
