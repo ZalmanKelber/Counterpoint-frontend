@@ -2,58 +2,15 @@
     font-family: "Open Sans", sans-serif;
     width: 90vw;
     margin: auto 5vw 5vw;
-    display: grid;
-    grid-template-columns: 2fr .5fr 1fr .5fr 1fr;
-    grid-template-rows: repeat(12, auto);
-    --arrow-color: #666;
 }
 
-.arrow-container {
-    padding: 200px 0;
-    grid-row: 1 / 13;
-    grid-column: 5 / 6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--arrow-color);
-}
-
-.arrow-text {
-    margin: 5px 0;
-}
-
-.upward-triangle {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 13px solid var(--arrow-color);
-}
-
-.arrow-body {
-    width: 10px;
-    height: 40px;
-    background-color: var(--arrow-color);
-}
-
-.arrow-filler {
-    flex: 1;
-}
-
-.downward-triangle {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 13px solid var(--arrow-color);
-}
 
 .type-title {
     grid-column: 1 / 4;
     font-size: 1.3rem;
     text-align: center;
     font-weight: 600;
-    margin: 10px 0;
+    margin: 20px 0 10px;
 }
 
 .solo-melody-title {
@@ -68,37 +25,96 @@
     grid-row: 10 / 11;
 }
 
+.type-selection-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .type-selection {
-    padding: 10px;
-    grid-column: 1 / 2;
-    margin: 5px 0;
-    font-size: 1.2rem;;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    height: 220px;
+    width: 220px;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
+
+.type-selection:hover {
+    cursor: pointer;
+    border: 3px solid black;
+    padding: 28px;
+    box-shadow: 2px 4px 2px #bbb;
+}
+
+.type-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.complexity-warning {
+    color: crimson;
+    font-size: .6rem;
+    font-weight: 400;
+    padding: 5px;
 }
 
 .type-description {
     font-size: 0.8rem;
     font-family: "Libre Caslon Text", serif;
+    flex: 1;
 }
 
 .type-description a {
-    color: blue;
+    color: #040853;
     text-decoration: underline;
 }
 
-.type-selection:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.05);
+.cantus-firmus {
+    background-color: rgba(75, 83, 32, .3);
 }
 
-.cantus-firmus {
-    grid-row: 2 / 3;
+.free-melody {
+    background-color: rgba(80, 220, 100, 0.3);
+}
+
+.first-species {
+    background-color: rgba(11, 102, 35, 0.3);
+}
+
+.second-species {
+    background-color: rgba(0, 78, 56, 0.3);
+}
+
+.third-species {
+    background-color: rgba(103, 146, 103, 0.3);
+}
+
+.fourth-species {
+    background-color: rgba(1, 121, 111, 0.3);
+}
+
+.fifth-species {
+    background-color: rgba(208, 240, 192, 0.3);
+}
+
+.free-counterpoint {
+    background-color: rgba(76, 187, 23, 0.3);
+}
+
+.imitative-counterpoint {
+    background-color: rgba(63, 122, 77, 0.3);
 }
 
 .preview-image {
-    grid-column: 3 / 4;
     width: 200px;
-    height: 40px;
-    margin: auto 0;
+    height: 75px;
+    margin: auto;
 }
 
 .preview-image:hover {
@@ -112,140 +128,41 @@
 }
 
 .free-melody-preview {
-    grid-row: 3 / 4;
     background: url("../images/FreeMelodyPreview.png") no-repeat;
     background-size: 100%;
 }
 
 .first-species-preview {
-    grid-row: 5 / 6;
     background: url("../images/FirstSpeciesPreview.png") no-repeat;
     background-size: 100%;
 }
 
 .second-species-preview {
-    grid-row: 6 / 7;
     background: url("../images/SecondSpeciesPreview.png") no-repeat;
     background-size: 100%;
 }
 
 .third-species-preview {
-    grid-row: 7 / 8;
     background: url("../images/ThirdSpeciesPreview.png") no-repeat;
     background-size: 100%;
 }
 
 .fourth-species-preview {
-    grid-row: 8 / 9;
     background: url("../images/FourthSpeciesPreview.png") no-repeat;
     background-size: 100%;
 }
 
 .fifth-species-preview {
-    grid-row: 9 / 10;
     background: url("../images/FifthSpeciesPreview.png") no-repeat;
     background-size: 100%;
 }
 
 .free-counterpoint-preview {
-    grid-row: 11 / 12;
     background: url("../images/FreeCounterpointPreview.png") no-repeat;
     background-size: 100%;
 }
 
 .imitative-counterpoint-preview {
-    grid-row: 12 / 13;
     background: url("../images/ImitativeCounterpointPreview.png") no-repeat;
     background-size: 100%;
-}
-
-.complexity-warning {
-    color: crimson;
-    font-size: .7rem;
-    font-weight: 400;
-}
-
-@media screen and (max-width : 700px) {
-    .show-types {
-        max-width: 90vw;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(21, auto);
-    }
-
-    .type-name {
-        font-size: 0.8rem;
-        font-weight: 600;
-        margin-bottom: 5px;
-    }
-
-    .type-description {
-        font-size: 0.5rem;
-    }
-
-    .arrow-container {
-        display: none;
-    }
-
-    .arrow-text {
-        font-size: .6rem;
-    }
-
-    .type-title {
-        font-size: 1.1rem;
-        margin: 4px 0;
-        grid-column: 1 / 2;
-    }
-
-    .solo-melody-title {
-        grid-row: 1 / 2;
-    }
-    
-    .species-counterpoint-title {
-        grid-row: 6 / 7;
-    }
-    
-    .two-part-counterpoint-title {
-        grid-row: 17 / 18;
-    }
-
-    .preview-image {
-        grid-column: 1 / 2;
-        margin-left: 10px;
-    }
-
-    .cantus-firmus-preview {
-        grid-row: 3 / 4;
-    }
-    
-    .free-melody-preview {
-        grid-row: 5 / 6;
-    }
-    
-    .first-species-preview {
-        grid-row: 8 / 9;
-    }
-    
-    .second-species-preview {
-        grid-row: 10 / 11;
-    }
-    
-    .third-species-preview {
-        grid-row: 12 / 13;
-    }
-    
-    .fourth-species-preview {
-        grid-row: 14 / 15;
-    }
-    
-    .fifth-species-preview {
-        grid-row: 16 / 17;
-    }
-    
-    .free-counterpoint-preview {
-        grid-row: 19 / 20;
-    }
-    
-    .imitative-counterpoint-preview {
-        grid-row: 21 / 22;
-    }
 }

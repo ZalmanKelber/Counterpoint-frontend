@@ -106,7 +106,7 @@
     margin-bottom: 10vh;
 }
 
-@media screen and (max-width : 500px) {
+@media screen and (max-width : 400px) {
 
     .success-container {
         display: flex;
@@ -117,7 +117,7 @@
         align-items: center;
         justify-content: space-around;
         padding-bottom: 20px;
-        min-height: 400px;
+        min-height: 100vw;
     }
 
     .waiting-for-results {
