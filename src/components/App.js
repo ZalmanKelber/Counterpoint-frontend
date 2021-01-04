@@ -15,7 +15,7 @@ class App extends React.Component {
     const herokuWakeup = new XMLHttpRequest();
     herokuWakeup.open("GET", "https://counterpoint-server.herokuapp.com/api/wake_up");
     herokuWakeup.onload = e => {
-      console.log("response from herokuWakeup:", herokuWakeup.response)
+      console.log("response from herokuWakeup call:", herokuWakeup.response)
     }
     herokuWakeup.send();
   }
