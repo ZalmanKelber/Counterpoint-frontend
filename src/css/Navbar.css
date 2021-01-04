@@ -26,31 +26,6 @@
     font-size: 1.6rem;
 }
 
-@media screen and (max-width : 520px) {
-
-    .menu-link {
-        font-size: 3vw;
-        width: 10vw;
-        padding: 4px;
-        margin: 1px;
-    }
-
-    .menu-link a {
-        font-weight: 600;
-    }
-}
-
-@media screen and (max-width : 750px) {
-
-    .navbar {
-        justify-content: center;
-    }
-
-    .navbar-title {
-      display: none;
-    }
-}
-
 a {
     color:white;
     font-weight: 300;
@@ -67,4 +42,26 @@ a:hover {
     text-align: center;
     margin: 10px;
     color: white;
+}
+
+@media screen and (max-width : 520px) {
+
+    .menu-link {
+        font-size: 5vw;
+        width: 20vw;
+        padding: 4px;
+        margin: 1px;
+        background: rgba(0, 0, 0, .3);
+    }
+}
+
+@media screen and (max-width : 750px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar-title {
+      display: none;
+    }
 }

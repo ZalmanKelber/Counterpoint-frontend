@@ -9,7 +9,11 @@ class DisplayResult extends React.Component {
     state = {
         waitingForResults: true,
         waitingForResultsDisplayPhase: 0,
-        blobURL: null
+        blobURL: null,
+        midiPlayer: window.MIDIjs,
+        playing: false,
+        inProgress: false,
+        midiLength: 100
     }
 
     componentDidMount = async () => {
@@ -28,19 +32,38 @@ class DisplayResult extends React.Component {
         xml.open("POST", "https://counterpoint-server.herokuapp.com/api");
         xml.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xml.responseType = "blob";
+        xml.onerror = () => {
+            this.tryAgain();
+        }
         xml.onload = e => {
-            if (xml.status === 200) {
-                const url = window.URL.createObjectURL(xml.response);
-                this.setState({ ...this.state, blobURL: url });
-                const MIDIjs = window.MIDIjs;
-                MIDIjs.play(url)
-            } else {
-                this.tryAgain()
+            const url = window.URL.createObjectURL(xml.response);
+            this.setState({ ...this.state, blobURL: url, playing: true, inProgress: true });
+            this.state.midiPlayer.play(url)
+            this.state.midiPlayer.get_duration(url, seconds => this.setState({ ...this.state, midiLength: seconds }));
+            this.state.midiPlayer.player_callback = data => {
+                if (data.time > this.state.midiLength) {
+                    this.setState({ ...this.state, playing: false, inProgress: false });
+                }
             }
           };
         xml.send(jsonRequest);
         this.setState({ ...this.state, waitingForResults: false});
 
+    }
+
+    togglePlaying = () => {
+        if (this.state.playing) {
+            this.state.midiPlayer.pause();
+        } else if (this.state.inProgress) {
+            this.state.midiPlayer.resume();
+        } else {
+            this.state.midiPlayer.play(this.state.blobURL)
+        }
+        this.setState({ ...this.state, playing: !this.state.playing, inProgress: true });
+    }
+
+    componentWillUnmount = () => {
+        this.state.midiPlayer.stop()
     }
 
     getWaitingForResultsDisplayString = () => {
@@ -68,6 +91,7 @@ class DisplayResult extends React.Component {
     }
 
     tryAgain = () => {
+        console.log("trying again")
         this.props.refreshDisplayResult();
     }
 
@@ -86,8 +110,11 @@ class DisplayResult extends React.Component {
             {
                 this.state.blobURL && 
                 <>
+                <h2 className="success-title">Success!  Here's the composition you generated.  Click below to download as a MIDI file</h2>
                 <div className="success-container">
-                    <h2 className="success-title">Success!  Here's the composition you generated.  Click below to download as a MIDI file</h2>
+                    <div className="toggle-button-outer" onClick={this.togglePlaying}>
+                        <div className={this.state.playing ? "pause-button" : "play-button"}></div>
+                    </div>
                     {/* <div className="audio-player-container">
                         <AudioPlayer
                             autoPlay
@@ -102,7 +129,7 @@ class DisplayResult extends React.Component {
                 <h2 className="download-button results-button" onClick={this.downloadAudio}>Download MIDI</h2>
                 <h2 className="generate-option results-button" onClick={this.tryAgain}>Try again with same parameters</h2>
                 <h2 className="or">or</h2>
-                <h2 className="generate-option results-button" onClick={this.startNew}>Start from the beginning</h2>
+                <h2 className="start-new results-button" onClick={this.startNew}>Start from the beginning</h2>
                 </>
     
             }

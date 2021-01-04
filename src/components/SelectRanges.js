@@ -20,30 +20,26 @@ class SelectRanges extends React.Component {
         return ["cantusFirmus", "freeMelody"].includes(this.props.currentSelections.type) ? 1 : 2;
     }
 
-    getClassList = (vocalRange, i) => {
-        if (this.getNumberOfLines() === 1) return this.state.selected.includes(vocalRange) ? "range selected-range" : "range";
-        return this.state.selectedIndex === i ? "range selected-range" : "range";
-    }
-
-    handleClick = (vocalRange, i) => {
-        let rangeList = [vocalRange]
+    handleClick = async (vocalRange, i) => {
         if (this.getNumberOfLines() === 2) {
             switch (i) {
                 case 0:
-                    rangeList = ["alto", "soprano"];
+                    await this.props.updateValue(["alto", "soprano"]);
                     break;
                 case 1:
-                    rangeList = ["tenor", "alto"];
+                    await this.props.updateValue(["tenor", "alto"]);
                     break;
                 default:
-                    rangeList = ["bass", "tenor"];
+                    await this.props.updateValue(["bass", "tenor"]);
             }
-        } 
-        this.setState({ ...this.state, selected: rangeList, selectedIndex: i });
+        } else {
+            await this.props.updateValue([vocalRange]);
+        }
+        this.props.goForward();
     }
 
     render() {
-        const vocalRangesList = this.getNumberOfLines() === 2 ? [["soprano", "alto"], ["alto", "tenor"], ["tenor", "bass"]]: [["soprano", "alto", "tenor", "bass"]];
+        const vocalRangesList = this.getNumberOfLines() === 2 ? [["soprano", "alto"], ["alto", "tenor"], ["tenor", "bass"]]: [["soprano"], ["alto"], ["tenor"], ["bass"]];
         const instructionString = this.getNumberOfLines() === 2 ? "TWO VOCAL RANGES" : "A VOCAL RANGE";
         const stepTitle = `STEP 3: CHOOSE ${instructionString}`
         return (
@@ -59,12 +55,24 @@ class SelectRanges extends React.Component {
                         {
                             vocalRangesList.map((vocalRanges, i) => {
                                 return (
-                                    <div className="ranges-list" key={i}>
+                                    <div 
+                                        key={i}
+                                        className="range-list" 
+                                        onClick={this.getNumberOfLines() === 2 ? () => this.handleClick("", i) : null}
+                                    >
                                         {
                                             vocalRanges.map((vocalRange, j) => {
-                                                const classList = this.getClassList(vocalRange, i);
+                                                const classList = "range " + vocalRange
                                                 return (
-                                                <div key={j} className={classList} onClick={() => this.handleClick(vocalRange, i)}>{vocalRange.toUpperCase()}</div>
+                                                <div key={j}>
+                                                <div className={classList} onClick={() => this.handleClick(vocalRange, i)}>
+                                                    <div className="range-text">{vocalRange.toUpperCase()}</div>
+                                                </div>
+                                                {
+                                                    this.getNumberOfLines() === 2 && j !== vocalRanges.length - 1 && 
+                                                    <div className="between-ranges">and</div>
+                                                }
+                                                </div>
                                                 );
                                             })
                                         }

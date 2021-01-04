@@ -30,12 +30,65 @@
     box-shadow: 2px 4px 2px #bbb;
 }
 
-.mode-selection p {
-    font-size: 1.1em;
-}
-
 .mode-selection h3 {
     font-size: 1.4em;
+}
+
+.mode-selection-title {
+    margin: 5px 0 -10px;
+}
+
+.mode-pitches {
+    font-weight: 600;
+    font-size: .9em;
+}
+
+.ionian {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/ionianSelection.jpg") no-repeat center center; 
+}
+
+.dorian {
+    background: linear-gradient(
+      rgba(255, 255, 255, .5),
+      rgba(255, 255, 255, .5)
+    ),
+    url("../images/dorianSelection.jpg") no-repeat center center; 
+}
+
+.phrygian {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/phrygianSelection.jpg") no-repeat center center; 
+}
+
+.lydian {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("../images/lydianSelection.jpg") no-repeat center center; 
+}
+
+.mixolydian {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("../images/mixolydianSelection.jpg") no-repeat center center; 
+}
+
+.aeolian {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/aeolianSelection.jpg") no-repeat center center; 
 }
 
 @media screen and (max-width : 400px) {

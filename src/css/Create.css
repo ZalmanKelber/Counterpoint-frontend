@@ -1,16 +1,23 @@
-.go-back-button {
-    font-family: "Open Sans", sans-serif;
-    margin: 20px 0 0 10px;
+.go-back-button, .back-button-placeholder {
+    font-size: 3rem;
+    font-family: "Libre Caslon Text", serif;
+    margin-left: 20vh;
+    font-weight: 300;
+}
+
+.back-button-placeholder {
+    opacity: 0;
 }
 
 .go-back-button:hover {
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
 }
 
-.create-title, .step-title {
+.create-title, .step-title, .select-type-description {
     font-family: "Open Sans", sans-serif;
-    width: 100%;
+    width: 90%;
+    margin: auto;
     text-align: center;
 
 }
@@ -23,6 +30,18 @@
     font-size: 1.9rem;
 }
 
+.step-description {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    max-width: 600px;
+    margin: 15px auto 0;
+}
+
+.step-header-rule {
+    width: 80vw;
+    margin: 30px auto 20px;
+}
+
 .step-content {
     min-height: 100px;
     width: 100%;
@@ -31,4 +50,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width : 400px) {
+    .create-title {
+        font-size: 1.5rem;
+    }
+    
+    .step-title {
+        font-size: 1.1rem;
+    }
+
+    .go-back-button {
+        font-size: 2rem;
+    }
 }

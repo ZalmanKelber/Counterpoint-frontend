@@ -13,21 +13,18 @@ class SelectType extends React.Component {
 
     render() {
 
-        const stepTitle = "STEP 1: CHOOSE TYPE"
+        const stepTitle = "STEP 1: CHOOSE TYPE";
+        const stepDescription = `Select a type of counterpoint exercise to generate. \r\n
+                                This will be a short musical composition in the style of the Italian Renaissance composer Giovanni Pierluigi da Palestrina.`
 
         return (
             <>
             <SelectStepHeader 
                 stepTitle={stepTitle}
                 showGoBackButton={false}
+                stepDescription={stepDescription}
             />
             <div className="step-content">
-                <div className="select-type-description">
-                    Select a type of counterpoint exercise to generate.
-                    <br />
-                    This will be a short musical composition in the style of the Italian Renaissance composer Giovanni Pierluigi da Palestrina.
-                    <hr />
-                </div>
                 <div className="show-types">
                     <div className="arrow-container">
                         <div className="arrow-text">(Simpler / Faster)</div>
@@ -97,15 +94,15 @@ class SelectType extends React.Component {
                         <div className="type-name">Imitative Counterpoint</div>
                         <div className="type-description">Two free melodies that begin with the same theme or motif</div>
                     </div>
-                    <div className="preview-image cantus-firmus-preview"></div>
-                    <div className="preview-image free-melody-preview"></div>
-                    <div className="preview-image first-species-preview"></div>
-                    <div className="preview-image second-species-preview"></div>
-                    <div className="preview-image third-species-preview"></div>
-                    <div className="preview-image fourth-species-preview"></div>
-                    <div className="preview-image fifth-species-preview"></div>
-                    <div className="preview-image free-counterpoint-preview"></div>
-                    <div className="preview-image imitative-counterpoint-preview"></div>
+                    <div className="preview-image cantus-firmus-preview" onClick={() => this.handleClick("cantusFirmus")}></div>
+                    <div className="preview-image free-melody-preview" onClick={() => this.handleClick("freeMelody")}></div>
+                    <div className="preview-image first-species-preview" onClick={() => this.handleClick("twoPartFirstSpecies")}></div>
+                    <div className="preview-image second-species-preview" onClick={() => this.handleClick("twoPartSecondSpecies")}></div>
+                    <div className="preview-image third-species-preview" onClick={() => this.handleClick("twoPartThirdSpecies")}></div>
+                    <div className="preview-image fourth-species-preview" onClick={() => this.handleClick("twoPartFourthSpecies")}></div>
+                    <div className="preview-image fifth-species-preview" onClick={() => this.handleClick("twoPartFifthSpecies")}></div>
+                    <div className="preview-image free-counterpoint-preview" onClick={() => this.handleClick("twoPartFreeCounterpoint")}></div>
+                    <div className="preview-image imitative-counterpoint-preview" onClick={() => this.handleClick("twoPartImitativeCounterpoint")}></div>
                     
                 </div>
             </div>

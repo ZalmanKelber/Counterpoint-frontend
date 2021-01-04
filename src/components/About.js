@@ -41,7 +41,7 @@ class About extends React.Component {
                     <p>
                         Subsequent exercises involve writing two simultaneous, polyphonic melodies: one is a Cantus Firmus.  The other is a form 
                         of <em>Species Counterpoint</em>.  Species Counterpoint melodies are different kinds of simple melodies that demonstrate 
-                        various rules for melody that are dependent on a specific type of rhythm, as well as corresponding rules for 
+                        various rules that are specific to particular rhythms, as well as corresponding rules for 
                         harmony between the Counterpoint line and the Cantus Firmus.  The First Species is essentially identical to a Cantus Firmus.  
                         The Species culminate with the Fifth Species, which is essentially a free melody – one we might actually encounter in the 
                         works of Palestrina.
@@ -70,7 +70,7 @@ class About extends React.Component {
                     </p>
                     <p>
                         The rules regarding harmony generally involve the question of when <a href="https://en.wikipedia.org/wiki/Consonance_and_dissonance">
-                        dissonant intervals</a> between the two melodies are allowed.  These rules tend to be fairly complicated because they question 
+                        dissonant intervals</a> between the two melodies are allowed.  These rules tend to be fairly complicated because the question 
                         of whether or not a dissonant interval is allowed generally has to do with the melodic context of both voices.
                     </p>
                     <h3 className="about-question">Q: Are these rules "rules" or "guidelines?"</h3>
@@ -99,8 +99,11 @@ class About extends React.Component {
                     <h3 className="about-question">Q: What are some of the other next steps for the project?</h3>
                     <p>
                         The program so far only writes examples with one or two simultaneous melodies.  Traditionally, this style of counterpoint 
-                        culminates with five simultanous melodies.  Eventually, this program will ideally generate a <em>musical score</em> in addition
-                        to a sound file of each example (the two programs necessary for this – Lilypond and Abjad – are not easy to deploy as python dependencies).
+                        culminates with five simultanous melodies.
+                    </p>
+                    <p>
+                        Switching from a backtracking algorithm to a local search algorithm has the possibility of dramatically increasing performance,
+                        however this will likely require a complete rewrite of most of the code.
                     </p>
                     <h3 className="about-question">Q: Whoa.  Five simultaneous, independent melodies, obeying dozens of complex rules?
                     What does that sound like</h3>
