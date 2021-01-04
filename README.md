@@ -1,10 +1,10 @@
-# Counterpoint Generator (in Progress)
+# Counterpoint Generator
 
-View the live project [here](https://zalmankelber.github.io/Counterpoint-frontend).
+View the live project [here.](https://zalmankelber.github.io/Counterpoint-frontend)
 
-This repository contains the files for the React frontend of the project, which is hosted on **GitHub Pages.** The API is hosted on **Heroku** and can be found at [this repository](https://github.com/ZalmanKelber/Counterpoint-server).
+This repository contains the files for the React frontend of the project, which is hosted on **GitHub Pages.** The API is hosted on **Heroku** and can be found at [this repository.](https://github.com/ZalmanKelber/Counterpoint-server)
 
-An earlier version of the API can be seen at [this repository](https://github.com/ZalmanKelber/Counterpoint)
+An earlier version of the API can be seen at [this repository.](https://github.com/ZalmanKelber/Counterpoint)
 
 ## Basic Description 
 
