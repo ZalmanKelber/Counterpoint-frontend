@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Counterpoint-frontend/static/css/main.cfbefc67.chunk.css",
-    "main.js": "/Counterpoint-frontend/static/js/main.b55b2602.chunk.js",
-    "main.js.map": "/Counterpoint-frontend/static/js/main.b55b2602.chunk.js.map",
+    "main.js": "/Counterpoint-frontend/static/js/main.5fb38af2.chunk.js",
+    "main.js.map": "/Counterpoint-frontend/static/js/main.5fb38af2.chunk.js.map",
     "runtime-main.js": "/Counterpoint-frontend/static/js/runtime-main.334f39a3.js",
     "runtime-main.js.map": "/Counterpoint-frontend/static/js/runtime-main.334f39a3.js.map",
     "static/css/2.3e35cbb6.chunk.css": "/Counterpoint-frontend/static/css/2.3e35cbb6.chunk.css",
@@ -26,6 +26,6 @@
     "static/css/2.3e35cbb6.chunk.css",
     "static/js/2.e0565e32.chunk.js",
     "static/css/main.cfbefc67.chunk.css",
-    "static/js/main.b55b2602.chunk.js"
+    "static/js/main.5fb38af2.chunk.js"
   ]
 }
