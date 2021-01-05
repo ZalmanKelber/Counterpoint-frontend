@@ -14,7 +14,7 @@ class SelectType extends React.Component {
     render() {
 
         const stepTitle = "STEP 1: CHOOSE TYPE";
-        const stepDescription = `Select a type of counterpoint exercise to generate. \r\n
+        const stepDescription = `Select a type of counterpoint exercise for the algorithm to generate. \r\n
                                 This will be a short musical composition in the style of the Italian Renaissance composer Giovanni Pierluigi da Palestrina.`
 
         return (

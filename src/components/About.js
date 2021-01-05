@@ -17,10 +17,16 @@ class About extends React.Component {
                 <h1 className="create-title">ABOUT</h1>
                 <div className="about-content">
                     <h3 className="about-heading">
-                        To learn more about this program from a technical standpoint, or to watch a short video demonstration,
+                        To learn more about this program from a technical standpoint,
                         visit the <a href="https://github.com/ZalmanKelber/Counterpoint-frontend">Github repository</a>
                     </h3>
-                    <h3 className="about-heading">To learn the basics of what this project is, read the following Q & A</h3>
+                    <h3 className="about-heading">
+                        To view a brief demo and explanation, 
+                        watch <a href="https://www.youtube.com/watch?v=Nhg4Vy4zuc8&feature=youtu.be">this video</a>
+                    </h3>
+                    <h3 className="about-heading">
+                        To learn the basics of what this project is, read the following Q & A
+                    </h3>
                     <br /><br /><hr />
                     <h3 className="about-question">Q: I don't know anything about Music Theory or Music History.  What is this?</h3>
                     <p>
@@ -121,7 +127,7 @@ class About extends React.Component {
                     </p>
                     <p>
                         Homepage: Jacques Gaimard, Navbar: Rob Porter, Gallery: Dimitris Vetsikas, Results Player: Enrique Lopez Garre, Thumbnail: Christo Anestev, 
-                        Ionian box: Thomas Hendele, Dorian box: Goran Horvat, Phrygian box: Enrique Lopez Garre, Lydian box: Markus Wittmann, 
+                        Ionian box: Robert Balog, Dorian box: Goran Horvat, Phrygian box: Enrique Lopez Garre, Lydian box: Markus Wittmann, 
                         Mixolydian box: Hans Braxmeier, Aeolian box: Alexander Stein
                     </p>
 
