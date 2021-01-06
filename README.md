@@ -2,6 +2,8 @@
 
 View the live project [here.](https://zalmankelber.github.io/Counterpoint-frontend)
 
+Watch a quick video demo and explanation [here.](https://www.youtube.com/watch?v=Nhg4Vy4zuc8&feature=youtu.be)
+
 This repository contains the files for the React frontend of the project, which is hosted on **GitHub Pages.** The API is hosted on **Heroku** and can be found at [this repository.](https://github.com/ZalmanKelber/Counterpoint-server)
 
 An earlier version of the API can be seen at [this repository.](https://github.com/ZalmanKelber/Counterpoint)
@@ -63,6 +65,16 @@ Once an example is written, it is converted to a MIDI file using [MIDIUtil](http
 The API for this app is deployed on Heroku.  Examples are created when a Flask API endpoint receives a JSON request specifying the type of example requested, the mode, the number of measures, the vocal range or ranges and, if relevant, the line in which the Cantus Firmus should appear.  The Flask app is run on a gunicorn server.
 
 The frontend UI is built with React and deployed on GitHub pages.  When examples are received from the API (in the form of MIDI files), they are played back using [MIDIjs](https://www.midijs.net/).
+
+## Complexity 
+
+Without any rules or checks on style, the number of possible solutions to a backtracking algorithm is O(n^m), where n is the number of possible pitches an m is the number of locations for a pitch.  In the most complicated examples (that is, two-part, free counterpoint), this evaluates to roughly 20^200.  
+
+The number valid examples drastically decreases when several dozen checks are added, but the time complexity is still far too great for the algorithm to collect all possible solutions and, for many attempts, to find the first possible solution.  This is the main reason why the attempt loop is necessary.
+
+## Credits 
+
+Photo credits can be viewed on the [about page.](https://zalmankelber.github.io/Counterpoint-frontend/#/about)
 
 ## Issues 
 

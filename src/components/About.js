@@ -31,7 +31,7 @@ class About extends React.Component {
                     <h3 className="about-question">Q: I don't know anything about Music Theory or Music History.  What is this?</h3>
                     <p>
                         <em>Counterpoint</em> refers to a series of musical composition exercises that have been considered fundamental to 
-                        Western musical education for centuries.  This program composes and displays examples of several kinds of these exercises.
+                        Western musical education for centuries.  This program uses an algorithm to compose and display examples of several kinds of these exercises.
                     </p>
                     <p>
                         There are many different <em>styles</em> of counterpoint.  These examples are in the style of 
