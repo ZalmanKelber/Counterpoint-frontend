@@ -9,15 +9,15 @@ class Enter extends React.Component {
     render() {
 
         return (
-            <Link to="/landing">
                 <div className="enter">
+                    <Link to="/landing">
                     <div className="click-to-enter">
                         COUNTERPOINT GENERATOR<br />
                        <hr />
                         CLICK TO ENTER
                     </div>
+                    </Link>
                 </div>
-            </Link>
         );
     }
 

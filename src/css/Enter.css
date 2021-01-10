@@ -9,15 +9,18 @@
     grid-template-rows: 1fr auto 1fr;
 }
 
-.click-to-enter {
+.enter a {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+
+.click-to-enter {
     text-align: center;
     padding: 30px;
     color: white;
     border: 1px solid white;
     border-radius: 5px;
-    transition: all 150ms;
+    transition: font-size 150ms;
 }
 
 .click-to-enter:hover {
