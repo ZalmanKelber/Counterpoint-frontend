@@ -23,6 +23,9 @@ const phases = {
 
 class Create extends React.Component {
 
+    //phase keeps track of which step the user is in, and thus which component should be rendered
+    //selected values will form the JSON request sent to the backend
+
     state = {
         currentPhase: phases.SELECT_TYPE,
         selectedValues: {
@@ -30,6 +33,8 @@ class Create extends React.Component {
         }
     }
 
+    //returns a function (to be passed down through props) that updates state by assining a value to a particular
+    //category in selectedValues
     getUpdateFunction = parameterToChange => {
         const updateFunction = newValue => {
             this.setState({
@@ -43,6 +48,7 @@ class Create extends React.Component {
         return updateFunction;
     }
 
+    //returns a function (to be passed down through props) that changes state to the specificed phase
     getChangePhaseFunction = newPhase => {
         const getChangePhaseFunction = () => {
             this.setState({
@@ -53,6 +59,7 @@ class Create extends React.Component {
         return getChangePhaseFunction;
     }
 
+    //returns state to default values
     refreshState = () => {
         this.setState({
             currentPhase: phases.SELECT_TYPE,
@@ -62,6 +69,8 @@ class Create extends React.Component {
         })
     }
 
+    //changes the phase twice in order to re-mount the DisplayResult component (and thus re-send the request to the backend called in 
+    //that component's componentDidMount function)
     refreshDisplayResult = async () => {
         await this.setState({
             ...this.state,

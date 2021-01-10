@@ -10,6 +10,7 @@ const modes = ["ionian", "dorian", "phrygian", "lydian", "mixolydian", "aeolian"
 
 class Gallery extends React.Component {
 
+    //keeps track of which example is being displayed
     state = { selectedMode: null }
 
     selectMode = mode => {

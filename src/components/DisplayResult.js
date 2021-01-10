@@ -9,15 +9,18 @@ class DisplayResult extends React.Component {
     state = {
         waitingForResults: true,
         waitingForResultsDisplayPhase: 0,
-        blobURL: null,
-        midiPlayer: window.MIDIjs,
-        playing: false,
-        inProgress: false,
+        blobURL: null, //this will be the url for the MIDI file we eventually receive from the backend API
+        midiPlayer: window.MIDIjs, //MIDIjs is in the window scope through a cdn in the public index.html file
+        playing: false, //keeps track of whether the received MIDI file is currently playing
+        inProgress: false, //keeps track of whether the received MIDI file is currently either playing or paused
         midiLength: 100
     }
 
     componentDidMount = async () => {
         const jsonRequest = JSON.stringify(this.props.currentSelections);
+
+        //sets a waitingForResultsDisplayPhase while HTTP request is pending, that will be used to set the changing 
+        //message
         const handler = setInterval(() => {
             if (this.state.blobURL) {
                 clearInterval(handler);
@@ -28,10 +31,13 @@ class DisplayResult extends React.Component {
                 this.setState({ ...this.state, waitingForResultsDisplayPhase: nextPhase });
             }
         }, 500);
+
+        //xml object will handle the request to the backend
         const xml = new XMLHttpRequest();
         xml.open("POST", "https://counterpoint-server.herokuapp.com/api");
         xml.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xml.responseType = "blob";
+        xml.responseType = "blob"; 
+        //if request fails, remount the component and try again
         xml.onerror = () => {
             this.tryAgain();
         }
@@ -41,6 +47,7 @@ class DisplayResult extends React.Component {
             this.state.midiPlayer.play(url)
             this.state.midiPlayer.get_duration(url, seconds => this.setState({ ...this.state, midiLength: seconds }));
             this.state.midiPlayer.player_callback = data => {
+                //updates state when MIDI file finishes playing to show that file is no longer in progress
                 if (data.time > this.state.midiLength) {
                     this.setState({ ...this.state, playing: false, inProgress: false });
                 }
@@ -51,6 +58,7 @@ class DisplayResult extends React.Component {
 
     }
 
+    //plays or pauses MIDI file.  Sets inProgress to true
     togglePlaying = () => {
         if (this.state.playing) {
             this.state.midiPlayer.pause();
@@ -81,6 +89,7 @@ class DisplayResult extends React.Component {
         }
     }
 
+    //downloads MIDI file.  Called when user clicks download button
     downloadAudio = () => {
         const link = document.createElement("a");
         link.download = "counterpoint.mid";
@@ -90,10 +99,12 @@ class DisplayResult extends React.Component {
         document.body.removeChild(link);
     }
 
+    //re-mounts component, thus resending xml request
     tryAgain = () => {
         this.props.refreshDisplayResult();
     }
 
+    //changes Create component phase back to starting variables
     startNew = () => {
         this.props.refreshState();
     }

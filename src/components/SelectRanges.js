@@ -11,6 +11,7 @@ class SelectRanges extends React.Component {
         selectedIndex: null
     }
 
+    //determines whether user needs to select one vocal range or two adjacent vocal ranges depending on the selected exercise
     getNumberOfLines = () => {
         return ["cantusFirmus", "freeMelody"].includes(this.props.currentSelections.type) ? 1 : 2;
     }

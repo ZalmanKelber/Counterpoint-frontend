@@ -39,6 +39,7 @@ class Landing extends React.Component {
         this.state.audio.pause()
     }
 
+    //starts audio by assigning audio player to state.audio
     startPage = () => {
         document.getElementById("landing").className = "landing landing-before-transition";
         const audio = new Audio(process.env.PUBLIC_URL + "/frontendAudio/mixolydian.wav");
@@ -46,6 +47,7 @@ class Landing extends React.Component {
         this.setState({ ...this.state, audio: audio })
     }
 
+    //changes opacity of entire component from 1 to .7
     firstFade = () => {
         let count = 0;
         const handler = setInterval(() => {
@@ -64,6 +66,7 @@ class Landing extends React.Component {
         }, INTERVAL_TIME);
     }
 
+    //background opacity remains at .7 (handled in css) while title fades in
     secondFade = () => {
         let count = 0;
         const handler = setInterval(() => {
@@ -78,6 +81,7 @@ class Landing extends React.Component {
         }, INTERVAL_TIME);
     }
 
+    //menu options fade in
     thirdFade = () => {
         let count = 0;
         const handler = setInterval(() => {
