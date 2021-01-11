@@ -4,6 +4,8 @@ View the live project [here.](https://zalmankelber.github.io/Counterpoint-fronte
 
 Watch a quick video demo and explanation [here.](https://www.youtube.com/watch?v=Nhg4Vy4zuc8&feature=youtu.be)
 
+Read more about this project in [this Medium post](https://alexkelber.medium.com/using-a-backtracking-algorithm-to-generate-two-part-imitative-polyphony-in-the-style-of-palestrina-41dac93023b0)
+
 This repository contains the files for the React frontend of the project, which is hosted on **GitHub Pages.** The API is hosted on **Heroku** and can be found at [this repository.](https://github.com/ZalmanKelber/Counterpoint-server)
 
 An earlier version of the API can be seen at [this repository.](https://github.com/ZalmanKelber/Counterpoint)

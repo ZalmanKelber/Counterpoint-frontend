@@ -8,7 +8,6 @@ import "../css/About.css"
 
 class About extends React.Component {
 
-
     render() {
 
         return (
@@ -23,6 +22,11 @@ class About extends React.Component {
                     <h3 className="about-heading">
                         To view a brief demo and explanation, 
                         watch <a href="https://www.youtube.com/watch?v=Nhg4Vy4zuc8&feature=youtu.be">this video</a>
+                    </h3>
+                    <h3 className="about-heading">
+                        To learn more,  
+                        read <a href="https://alexkelber.medium.com/using-a-backtracking-algorithm-to-generate-two-part-imitative-polyphony-in-the-style-of-palestrina-41dac93023b0">
+                        this Medium post</a>
                     </h3>
                     <h3 className="about-heading">
                         To learn the basics of what this project is, read the following Q & A
