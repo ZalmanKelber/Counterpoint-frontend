@@ -55,6 +55,8 @@ class Create extends React.Component {
                 ...this.state,
                 currentPhase: newPhase
             });
+            //when a new phase is rendered, scroll to the top of the page
+            window.scrollTo(0, 0);
         }
         return getChangePhaseFunction;
     }
@@ -66,7 +68,9 @@ class Create extends React.Component {
             selectedValues: {
                 type: null, mode: null, lines: null, length: null, cantusFirmusIndex: 0
             }
-        })
+        });
+        //scroll back to the top of the page
+        window.scrollTo(0, 0);
     }
 
     //changes the phase twice in order to re-mount the DisplayResult component (and thus re-send the request to the backend called in 
