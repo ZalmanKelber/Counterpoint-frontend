@@ -2,7 +2,7 @@
 
 View the live project [here.](https://zalmankelber.github.io/Counterpoint-frontend)
 
-Watch a quick video demo and explanation [here.](https://www.youtube.com/watch?v=5Bmd_vf4Zwo&feature=youtu.be)
+Watch a quick video demo and explanation [here.](https://www.youtube.com/watch?v=WRb-gmUWNR0&feature=youtu.be)
 
 Read more about this project in [this Medium post](https://alexkelber.medium.com/using-a-backtracking-algorithm-to-generate-two-part-imitative-polyphony-in-the-style-of-palestrina-41dac93023b0)
 

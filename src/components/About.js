@@ -21,7 +21,7 @@ class About extends React.Component {
                     </h3>
                     <h3 className="about-heading">
                         To view a brief demo and explanation, 
-                        watch <a href="https://www.youtube.com/watch?v=5Bmd_vf4Zwo&feature=youtu.be">this video</a>
+                        watch <a href="https://www.youtube.com/watch?v=WRb-gmUWNR0&feature=youtu.be">this video</a>
                     </h3>
                     <h3 className="about-heading">
                         To learn more,  
