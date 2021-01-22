@@ -4,6 +4,13 @@
     text-align: center;
     margin-top: 10vw;
 }
+.heroku-warning {
+    font-family: "Libre Caslon Text", serif;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10vw;
+    color: red;
+}
 
 .success-container {
     background: linear-gradient(

@@ -89,6 +89,13 @@ class DisplayResult extends React.Component {
         }
     }
 
+    getHerokuWarningString = () => {
+        if (this.state.waitingForResultsDisplayPhase === 0) {
+            return "";
+        }
+        return "Note: longer requests may be delayed due to heroku timeout";
+    }
+
     //downloads MIDI file.  Called when user clicks download button
     downloadAudio = () => {
         const link = document.createElement("a");
@@ -111,11 +118,16 @@ class DisplayResult extends React.Component {
 
     render() {
         const waitingForResultsDisplayString = this.getWaitingForResultsDisplayString();
+        const herokuWarningString = this.getHerokuWarningString();
 
         return (
             <>
             {
-                !this.state.blobURL && <div className="waiting-for-results">{waitingForResultsDisplayString}</div>
+                !this.state.blobURL && 
+                <div>
+                    <div className="waiting-for-results">{waitingForResultsDisplayString}</div>
+                    <div className="heroku-warning">{herokuWarningString}</div>
+                </div>
             }
             {
                 this.state.blobURL && 
